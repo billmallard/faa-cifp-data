@@ -66,17 +66,6 @@ python download.py
 
 Requires network access to FAA data servers. See `download.py` for authentication and URL configuration.
 
-## Role in the MakerPlane / MAOS Ecosystem
-
-This is the **IFR navigation database** for the MAOS avionics stack. It enables:
-
-- Rendering instrument approach procedure courses on the [pyAvMap](../pyAvMap) moving map
-- Waypoint identification by name (fixes, VORs, NDBs, airports)
-- Airway routing for IFR flight planning
-- Procedure depiction during approach briefing
-
-For an IFR-capable MAOS cockpit, this data package (refreshed every 28 days) is a required component alongside pyEfis and pyAvMap.
-
 ## Important Disclaimer
 
 > FAA CIFP data is provided as a convenience for Experimental Amateur-Built aircraft use.  
