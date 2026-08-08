@@ -30,9 +30,9 @@ from pathlib import Path
 import requests
 
 # ---------------------------------------------------------------------------
-# NASA EarthData SRTMGL3 V003 endpoint
+# NASA EarthData SRTMGL3 V003 endpoint (LP DAAC EarthData Cloud)
 # ---------------------------------------------------------------------------
-SRTM3_BASE  = "https://e4ftl01.cr.usgs.gov/MEASURES/SRTMGL3.003/2000.02.11"
+SRTM3_BASE  = "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/SRTMGL3.003"
 AUTH_HOST   = "urs.earthdata.nasa.gov"
 
 # Pre-defined regional bounding boxes: (lat_min, lon_min, lat_max, lon_max)
@@ -88,7 +88,7 @@ def tiles_for_bbox(lat_min: float, lon_min: float, lat_max: float, lon_max: floa
 
 
 def tile_url(name: str) -> str:
-    return f"{SRTM3_BASE}/{name}.SRTMGL3.hgt.zip"
+    return f"{SRTM3_BASE}/{name}.SRTMGL3.hgt/{name}.SRTMGL3.hgt.zip"
 
 
 def sha256_file(path: Path) -> str:
